@@ -1,5 +1,7 @@
 # sqlalchemy-challenge
 
+* Please note that I was not able to complete the 2nd part of the assigment regarding Designing Your Own Climate App. It became a bit overwhelming to navigate this section of the assignment and was ultimately not able to establish a successful Flask application with functional routes.
+
 # SQLAlchemy Homework - Surfs Up!
 
 Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii! To help with your trip planning, you need to do some climate analysis on the area. The following outlines what you need to do.
