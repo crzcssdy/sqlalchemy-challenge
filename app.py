@@ -22,7 +22,10 @@ Measurement = Base.classes.measurement
 Station = Base.classes.station
 
 # Create our session (link) from Python to the DB
-
+@app.route("/")
+def welcome():
+    return (
+        f"Welcome to your Climate App!<br/>"
 
 #################################################
 # Flask Setup
