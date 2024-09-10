@@ -4,53 +4,57 @@
 
 Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii! To help with your trip planning, you need to do some climate analysis on the area. The following outlines what you need to do.
 
-## Task 1 - Climate Analysis and Exploration
+## Part 1 - Climate Analysis and Exploration
 
-To begin, use Python and SQLAlchemy to do basic climate analysis and data exploration of your climate database. All of the following analysis should be completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
+In this section, you’ll use Python and SQLAlchemy to do a basic climate analysis and data exploration of your climate database. Specifically, you’ll use SQLAlchemy ORM queries, Pandas, and Matplotlib. To do so, complete the following steps:
 
-* Use the provided [starter notebook](climate_starter.ipynb) and [hawaii.sqlite](Resources/hawaii.sqlite) files to complete your climate analysis and data exploration.
+* Note that you’ll use the provided files (climate_starter.ipynb and hawaii.sqlite) to complete your climate analysis and data exploration.
 
-* Choose a start date and end date for your trip. Make sure that your vacation range is approximately 3-15 days total.
+* Use the SQLAlchemy 'create_engine()' function to connect to your SQLite database.
 
-* Use SQLAlchemy `create_engine` to connect to your sqlite database.
+* Use the SQLAlchemy 'automap_base()' function to reflect your tables into classes, and then save references to the classes named station and measurement.
 
-* Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
+* Link Python to the database by creating a SQLAlchemy session.
+  
+* Perform a precipitation analysis and then a station analysis by completing the steps in the following two subsections.
 
 ### Precipitation Analysis
 
-* Design a query to retrieve the last 12 months of precipitation data.
+* Find the most recent date in the dataset.
 
-* Select only the `date` and `prcp` values.
+* Using that date, get the previous 12 months of precipitation data by querying the previous 12 months of data.
 
-* Load the query results into a Pandas DataFrame and set the index to the date column.
+* Select only the "date" and "prcp" values.
 
-* Sort the DataFrame values by `date`.
+* Load the query results into a Pandas DataFrame. Explicitly set the column names.
 
-* Plot the results using the DataFrame `plot` method.
+* Sort the DataFrame values by "date".
 
+* Plot the results by using the DataFrame plot method, as the following image shows:
+  
 * Use Pandas to print the summary statistics for the precipitation data.
 
 ### Station Analysis
 
-* Design a query to calculate the total number of stations.
-
-* Design a query to find the most active stations.
+* Design a query to calculate the total number of stations (that is, the stations that have the most rows). To do so, complete the following steps:
 
   * List the stations and observation counts in descending order.
 
-  * Which station has the highest number of observations?
+  * Answer the following question: which station id has the greatest number of observations?
 
-  * Hint: You may need to use functions such as `func.min`, `func.max`, `func.avg`, and `func.count` in your queries.
+* Design a query to retrieve the last 12 months of temperature observation data (tobs). To do so, complete the following steps:
 
-* Design a query to retrieve the last 12 months of temperature observation data (tobs).
+  * Filter by the station that has the greatest number of observations.
+    
+  * Query the previous 12 months of TOBS data for that station.
 
-  * Filter by the station with the highest number of observations.
-
-  * Plot the results as a histogram with `bins=12`.
+  * Plot the results as a histogram with bins=12, as the following image shows:
+ 
+  * Close your session.
 
 - - -
 
-## Task 2 - Climate App
+## Part 2 - Design Your Climate App
 
 Now that you have completed your initial analysis, design a Flask API based on the queries that you have just developed.
 
