@@ -44,3 +44,7 @@ def welcome():
 #################################################
 # Flask Routes
 #################################################
+
+@app.route("/api/v1.0/precipitation")
+def precipitation():
+    
