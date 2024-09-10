@@ -27,6 +27,8 @@ Station = Base.classes.station
 #################################################
 # Flask Setup
 #################################################
+app = Flask(__name__)
+
 # The input for precipitation route, stations route, and tobs route:
 @app.route("/")
 def welcome():
